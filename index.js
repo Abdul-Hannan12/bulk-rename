@@ -8,9 +8,10 @@ const {renameFiles} = require('./rename');
 
     const replace =  prompt("Enter what you want to replace: ");
     const replaceWith =  prompt("Enter what you want it to be replaced with: ");
-    const askPreview =  prompt("Do you want to preview before renaming? (Y/N): ");
-    const preview = (askPreview.toLowerCase() === 'y') ? true : false;
+
+    const askConfirm =  prompt("Are you sure You Want to rename? (Y/N): ");
+    const confirm = (askConfirm.toLowerCase() === 'y') ? true : false;
 
     const folder = "files";
 
-    renameFiles(folder, preview, replace, replaceWith);
+    renameFiles(folder, replace, replaceWith, confirm);
