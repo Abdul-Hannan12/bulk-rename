@@ -6,12 +6,12 @@ const {renameFiles} = require('./rename');
 // const prompt = (query) => new Promise((resolve) => rl.question(query, resolve));
 // rl.close();
 
-    const replace =  prompt("Enter what you want to replace: ");
-    const replaceWith =  prompt("Enter what you want it to be replaced with: ");
+const folder = prompt("Enter path of the folder: ");
 
-    const askConfirm =  prompt("Are you sure You Want to rename? (Y/N): ");
-    const confirm = (askConfirm.toLowerCase() === 'y') ? true : false;
+const replace =  prompt("Enter what you want to replace: ");
+const replaceWith =  prompt("Enter what you want it to be replaced with: ");
 
-    const folder = "files";
+const askConfirm =  prompt("Are you sure You Want to rename? (Y/N): ");
+const confirm = (askConfirm.toLowerCase() === 'y') ? true : false;
 
-    renameFiles(folder, replace, replaceWith, confirm);
+renameFiles(folder, replace, replaceWith, confirm);
