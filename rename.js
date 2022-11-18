@@ -31,6 +31,8 @@ const renameFiles = (folder, replace, replaceWith, confirm)=>{
     } else {
         console.log('Rename Cancelled!');
     }
+
+    setTimeout(()=>{},2000);
     
 }
 
